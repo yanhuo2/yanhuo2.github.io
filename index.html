@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跳转到微信</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #1aad19;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #189c16;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn" onclick="jump()">跳转到微信</button>
+
+    <script>
+        // 自动跳转
+        window.onload = function() {
+            jump();
+        };
+
+        // 跳转函数
+        function jump() {
+            var target = "weixin://biz/ww/profile/https://work.weixin.qq.com/ca/cawcde36985ece3065";
+            window.location.href = target;
+        }
+    </script>
+</body>
+</html>
